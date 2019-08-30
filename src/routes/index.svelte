@@ -1,33 +1,46 @@
 <style>
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-  }
+	h1, figure, p {
+		text-align: center;
+		margin: 0 auto;
+	}
 
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
+	h1 {
+		font-size: 2.8em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0 0 0.5em 0;
+	}
 
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
-  }
+	figure {
+		margin: 0 0 1em 0;
+	}
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 0 1em 0;
+	}
+
+	p {
+		margin: 1em auto;
+	}
+
+	@media (min-width: 480px) {
+		h1 {
+			font-size: 4em;
+		}
+	}
 </style>
 
 <svelte:head>
-  <title>Ant-Svelte docs</title>
+	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Ant-Svelte documentation</h1>
-<article>
-  <section>
-    Not much here yet.
-    <br />
-    This is very much a work in progress.
-    <a href="https://github.com/shoobah/ant-svelte">Git repo</a>
-  </section>
-</article>
+<h1>Great success!</h1>
+
+<figure>
+	<img alt='Borat' src='great-success.png'>
+	<figcaption>HIGH FIVE!</figcaption>
+</figure>
+
+<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
