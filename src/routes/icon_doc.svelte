@@ -1,9 +1,7 @@
 <script>
-  import { Icon, Dummy } from "ant-svelte";
+  import { Icon } from "ant-svelte";
   import * as allIcons from "@ant-design/icons/lib/dist";
   import { fade } from "svelte/transition";
-
-  console.log("Icon", Icon);
 
   var sortByNameThenTheme = (a, b) => {
     var nameComp = a.name.localeCompare(b.name, "en");
@@ -39,8 +37,6 @@
     .sort(byName ? sortByNameThenTheme : sortByThemeThenName);
 
   function onClick(icon) {
-    console.log("icon", icon);
-
     selectedIcon = icon;
     var text = icon.name + "." + icon.theme + "_text";
     var thing = document.getElementById(text);
