@@ -4,5 +4,5 @@
 
 <h1>Button</h1>
 <section>
-  <Button />
+  <Button value="Test" />
 </section>
