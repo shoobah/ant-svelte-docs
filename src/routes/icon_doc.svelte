@@ -1,7 +1,9 @@
 <script>
-  import * as Icon from "ant-svelte";
+  import { Icon } from "ant-svelte";
   import * as allIcons from "@ant-design/icons/lib/dist";
   import { fade } from "svelte/transition";
+
+  console.log("Icon", Icon);
 
   var sortByNameThenTheme = (a, b) => {
     var nameComp = a.name.localeCompare(b.name, "en");
@@ -78,10 +80,10 @@
 <section>
   <h2>Usage</h2>
   <p>The Icon element are used thus:</p>
-  <pre>
+  <!-- <pre>
     {'<Icon type="close-circle" theme="outline" color="black" />'}
     <Icon type="close-circle" theme="outline" color="black" />
-  </pre>
+  </pre> -->
   <p>
     The property theme is optional and defaults to outline.
     <br />
