@@ -28,5 +28,6 @@
 </svelte:head>
 
 <h1>Ant-svelte</h1>
-
-<p>There's only one component in this library so far, Icon</p>
+<p>
+  <img src="Ant-Svelte.png" alt="ant-svelte logo" />
+</p>
