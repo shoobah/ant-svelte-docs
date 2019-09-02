@@ -61,5 +61,13 @@
         icon
       </a>
     </li>
+    <li>
+      <a
+        rel="prefetch"
+        class={segment === 'button_doc' ? 'selected' : ''}
+        href="button_doc">
+        button
+      </a>
+    </li>
   </ul>
 </nav>

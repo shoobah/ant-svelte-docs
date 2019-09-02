@@ -2,6 +2,7 @@
   import { Icon } from "ant-svelte";
   import * as allIcons from "@ant-design/icons/lib/dist";
   import { fade } from "svelte/transition";
+  import copy from "copy-to-clipboard";
 
   var sortByNameThenTheme = (a, b) => {
     var nameComp = a.name.localeCompare(b.name, "en");
@@ -41,7 +42,7 @@
     var text = icon.name + "." + icon.theme + "_text";
     var thing = document.getElementById(text);
     thing.select();
-    document.execCommand("copy");
+    copy(icon.html);
   }
 
   function toggleSort(e) {
