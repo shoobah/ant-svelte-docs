@@ -1,5 +1,7 @@
 <script>
-  import { Button } from "ant-svelte";
+  import { Button, Icon } from "ant-svelte";
+
+  let size = "default";
 </script>
 
 <style>
@@ -11,32 +13,34 @@
 <h1>Button</h1>
 <section>
   <div>
-    <Button>Normal</Button>
-    <Button type="primary">Primary</Button>
-    <Button type="danger">Danger</Button>
-    <Button type="dashed">Dashed</Button>
-  </div>
-  <div>
-    <Button size="small">Normal - small</Button>
-    <Button size="small" type="primary">Primary - small</Button>
-    <Button size="small" type="danger">Danger - small</Button>
-    <Button size="small" type="dashed">Dashed - small</Button>
-  </div>
-  <div>
-    <Button size="large">Normal - large</Button>
-    <Button size="large" type="primary">Primary - large</Button>
-    <Button size="large" type="danger">Danger - large</Button>
-    <Button size="large" type="dashed">Dashed - large</Button>
-  </div>
-  <div>
-    <Button icon="download">Normal with icon</Button>
-    <Button icon="download" type="primary">Primary with icon</Button>
-    <Button icon="download" type="danger">Danger with icon</Button>
-    <Button icon="download" type="dashed">Dashed with icon</Button>
-  </div>
-  <div>
-    <Button icon="download" shape="round">Round with icon</Button>
-    <Button icon="download" shape="circle" />
-    <Button icon="download" type="primary" shape="circle" />
+    <Button onClick={() => (size = 'large')}>Large</Button>
+    <Button onClick={() => (size = 'default')}>Default</Button>
+    <Button onClick={() => (size = 'small')}>Small</Button>
+    <br />
+    <br />
+    <Button type="primary" {size}>Primary</Button>
+    <Button {size}>Normal</Button>
+    <Button type="dashed" {size}>Dashed</Button>
+    <Button type="danger" {size}>Danger</Button>
+    <Button type="link" {size}>Link</Button>
+    <br />
+    <Button type="primary" icon="download" {size} />
+    <Button type="primary" shape="circle" icon="download" {size} />
+    <Button type="primary" shape="round" icon="download" {size} />
+    <Button type="primary" shape="round" icon="download" {size}>
+      Download
+    </Button>
+    <Button type="primary" icon="download" {size}>Download</Button>
+    <br />
+    <!-- <Button.Group {size}>
+      <Button type="primary">
+        <Icon type="left" />
+        Backward
+      </Button>
+      <Button type="primary">
+        Forward
+        <Icon type="right" />
+      </Button>
+    </Button.Group> -->
   </div>
 </section>
