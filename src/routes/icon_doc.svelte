@@ -100,6 +100,12 @@
       twoToneColor="red" />
   </pre>
   <p>The property twoToneColor is optional and defaults to #80e8ff</p>
+  <p>You can set the spin property to make it spin (obviously).</p>
+  <pre>
+    {'<Icon type="close-circle" spin />'}
+    <Icon type="loading" theme="outline" spin />
+  </pre>
+  <p>The property twoToneColor is optional and defaults to #80e8ff</p>
 </section>
 <h2>Available icons:</h2>
 {#if selectedIcon}
