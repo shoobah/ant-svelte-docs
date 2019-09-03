@@ -77,6 +77,12 @@
   <title>Ant-svelte Icon</title>
 </svelte:head>
 
+<!-- {#if selectedIcon}
+  <Right>
+    <Icon size="8em" type={selectedIcon.name} theme={selectedIcon.theme} />
+    <pre>{selectedIcon.html}</pre>
+  </Right>
+{/if} -->
 <h1>Icon</h1>
 <section>
   <h2>Usage</h2>
@@ -112,10 +118,6 @@
   <p>The property twoToneColor is optional and defaults to #80e8ff</p>
 </section>
 <h2>Available icons:</h2>
-{#if selectedIcon}
-  <Icon size="8em" type={selectedIcon.name} theme={selectedIcon.theme} />
-  <pre>{selectedIcon.html}</pre>
-{/if}
 
 <div>{icons.length} icons available</div>
 <div style="padding-bottom:20px">

@@ -1,5 +1,6 @@
 <script>
   import Nav from "../components/Nav.svelte";
+  import Right from "../components/Right.svelte";
 
   export let segment;
 </script>
@@ -9,11 +10,9 @@
     display: grid;
     width: 100%;
     height: 250px;
-    grid-template-areas:
-      "nav  main"
-      "nav  foot";
-    grid-template-rows: 1fr 30px;
-    grid-template-columns: 150px 1fr;
+    grid-template-areas: "nav main right";
+    grid-template-rows: 1fr;
+    grid-template-columns: 150px 1fr 20%;
   }
   main {
     position: relative;
@@ -31,4 +30,5 @@
   <main>
     <slot />
   </main>
+  <Right>Hej</Right>
 </div>
