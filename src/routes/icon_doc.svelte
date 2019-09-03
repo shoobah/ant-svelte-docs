@@ -73,6 +73,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Ant-svelte Icon</title>
+</svelte:head>
+
 <h1>Icon</h1>
 <section>
   <h2>Usage</h2>

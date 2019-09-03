@@ -5,26 +5,30 @@
 </script>
 
 <style>
+  .wrapper {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+      "nav  main"
+      "nav  foot";
+    grid-template-rows: 1fr 30px;
+    grid-template-columns: 150px 1fr;
+  }
   main {
     position: relative;
     max-width: 56em;
     background-color: white;
-    padding: 2em;
-    margin: 0 auto;
+    padding-left: 1em;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: [left] 20% [main] auto [right] 10%;
-  }
-
-  .left {
-    grid-area: "left";
+    border-left: solid 1px #333;
+    grid-area: main;
   }
 </style>
 
-<Nav {segment} />
-
-<main>
-  <slot name="left" class="left" />
-  <slot name="main" class="main" />
-  <slot name="right" class="right" />
-</main>
+<div class="wrapper">
+  <Nav {segment} />
+  <main>
+    <slot />
+  </main>
+</div>
