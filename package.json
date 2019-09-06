@@ -18,6 +18,7 @@
     "sirv": "^0.4.2"
   },
   "devDependencies": {
+    "ant-svelte": "0.0.7",
     "@ant-design/icons": "^2.1.1",
     "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
