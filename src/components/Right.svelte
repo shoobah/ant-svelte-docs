@@ -5,5 +5,7 @@
 </style>
 
 <div>
+  Tja!
+  <br />
   <slot />
 </div>

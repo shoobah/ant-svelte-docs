@@ -10,9 +10,9 @@
     display: grid;
     width: 100%;
     height: 250px;
-    grid-template-areas: "nav main right";
+    grid-template-areas: "nav main";
     grid-template-rows: 1fr;
-    grid-template-columns: 150px 1fr 20%;
+    grid-template-columns: 150px 1fr;
   }
   main {
     position: relative;
@@ -30,5 +30,4 @@
   <main>
     <slot />
   </main>
-  <Right>Hej</Right>
 </div>
