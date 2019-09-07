@@ -20,11 +20,11 @@
   "devDependencies": {
     "ant-svelte": "0.0.7",
     "@ant-design/icons": "^2.1.1",
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.20.3",
     "rollup-plugin-babel": "^4.3.3",
@@ -34,6 +34,6 @@
     "rollup-plugin-svelte": "^5.1.0",
     "rollup-plugin-terser": "^5.1.1",
     "sapper": "^0.27.8",
-    "svelte": "^3.9.2"
+    "svelte": "^3.10.0"
   }
 }
