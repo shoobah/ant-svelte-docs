@@ -14,6 +14,19 @@
 
   p {
     margin: 1em auto;
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .icon {
+    width: 200px;
+  }
+
+  .badge {
+    position: relative;
+    top: 4px;
   }
 
   @media (min-width: 480px) {
@@ -29,5 +42,19 @@
 
 <h1>Ant-svelte</h1>
 <p>
-  <img src="Ant-Svelte.png" alt="ant-svelte logo" />
+  <a href="https://www.npmjs.com/package/ant-svelte">
+    <img
+      class="badge"
+      alt="npm link"
+      src="https://img.shields.io/npm/v/ant-svelte" />
+  </a>
+  <a href="https://www.npmjs.com/package/ant-svelte">
+    <img
+      class="badge"
+      alt="github link"
+      src="https://img.shields.io/github/package-json/v/shoobah/ant-svelte" />
+  </a>
+</p>
+<p>
+  <img class="icon" src="Ant-Svelte.png" alt="ant-svelte logo" />
 </p>
