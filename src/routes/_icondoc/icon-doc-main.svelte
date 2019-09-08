@@ -1,10 +1,10 @@
 <script>
-  export let setSelectedIcon;
-
   import { Icon } from "ant-svelte";
   import * as allIcons from "@ant-design/icons/lib/dist";
   import { fade } from "svelte/transition";
   import copy from "copy-to-clipboard";
+
+  export let setSelectedIcon;
 
   var sortByNameThenTheme = (a, b) => {
     var nameComp = a.name.localeCompare(b.name, "en");
@@ -27,6 +27,7 @@
   var selectedIcon;
   var byName = false;
   var icons = [];
+  var flipped = false;
 
   $: icons = Object.keys(allIcons)
     .map(key => allIcons[key])
@@ -65,8 +66,12 @@
     text-align: center;
     padding-bottom: 20px;
     width: 150px;
+    cursor: pointer;
   }
 
+  section {
+    padding-bottom: 1em;
+  }
   textarea {
     border: none;
     resize: none;
@@ -89,14 +94,19 @@
     <Icon type="close-circle" theme="outline" color="black" />
   </pre>
   <p>
-    The property theme is optional and defaults to outline.
+    The attribute
+    <strong>theme</strong>
+    is optional and defaults to outline.
     <br />
-    The property color is optional and defaults to black The property color is
-    optional and defaults to black
+    The attribute
+    <strong>color</strong>
+    is optional and defaults to black.
   </p>
   <p>
     If you want to use the twotone theme there's another optional attribute
-    called twoToneColor that's used for the second color.
+    called
+    <strong>twoToneColor</strong>
+    that's used for the second color.
   </p>
   <pre>
     {'<Icon type="close-circle" theme="twotone" color="black" twoToneColor="red" />'}
@@ -106,13 +116,26 @@
       color="black"
       twoToneColor="red" />
   </pre>
-  <p>The property twoToneColor is optional and defaults to #80e8ff</p>
-  <p>You can set the spin property to make it spin (obviously).</p>
+  <p>The attribute twoToneColor is optional and defaults to #80e8ff</p>
+  <p>You can set the spin attribute to make it spin (obviously).</p>
   <pre>
     {'<Icon type="close-circle" spin />'}
     <Icon type="loading" theme="outline" spin />
   </pre>
-  <p>The property twoToneColor is optional and defaults to #80e8ff</p>
+  <p>The attribute twoToneColor is optional and defaults to #80e8ff</p>
+  <p>
+    An icon can be rotated half a turn by setting the
+    <strong>flip</strong>
+    attribute to true
+  </p>
+  Click this! ->
+  <Icon
+    size="1em"
+    type="caret-up"
+    theme="fill"
+    flip={flipped}
+    style="cursor:pointer"
+    on:click={() => (flipped = !flipped)} />
 </section>
 <h2>Available icons:</h2>
 
@@ -123,7 +146,7 @@
     id="sortorder"
     name="sortorder"
     on:change={toggleSort} />
-  <label for="sortorder">Sort by name:</label>
+  <label for="sortorder">Sort by theme:</label>
 </div>
 <div class="wrapper">
   {#each icons as icon}
